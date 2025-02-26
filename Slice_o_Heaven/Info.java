@@ -11,7 +11,7 @@ public class Info {
     public String sides;
     public String drinks;
     private String orderID;
-    private double oederTotal;
+    private double orderTotal;
     public static final String DEF_ORDER_ID = "DEF-SOH-099";
     public static final String DEF_PIZZA_INGREDIENTS = "Mozzarella Cheese";
     public static final double DEF_PIZZA_TOTAL = 15.00; 
@@ -20,28 +20,28 @@ public class Info {
         return orderID;
     }
 
-    public double getOederTotal() {
-        return oederTotal;
+    public double getorderTotal() {
+        return orderTotal;
     }
 
     public void setOrderID(String orderID) {
         this.orderID = orderID;
     }
     
-    public void setOederTotal(double oederTotal) {
-        this.oederTotal = oederTotal;
+    public void setorderTotal(double orderTotal) {
+        this.orderTotal = orderTotal;
     }
 
     public Info(){
         this.orderID = DEF_ORDER_ID;
         this.pizzaIngredients = DEF_PIZZA_INGREDIENTS;
-        this.oederTotal = DEF_PIZZA_TOTAL;
+        this.orderTotal = DEF_PIZZA_TOTAL;
     }
 
-    public Info(String orderID, String pizzaIngredients, double oederTotal) {
+    public Info(String orderID, String pizzaIngredients, double orderTotal) {
         this.orderID = orderID;
         this.pizzaIngredients = pizzaIngredients;
-        this.oederTotal = oederTotal;
+        this.orderTotal = orderTotal;
     }
 
     public Info(String name, String address, String email, String phone, String menu, String ingredients, double price, String side, String drink, String orderID, double orderTotal) {
@@ -55,7 +55,7 @@ public class Info {
         this.sides = side;
         this.drinks = drink;
         this.orderID = orderID;
-        this.oederTotal = orderTotal;
+        this.orderTotal = orderTotal;
     }
     public void takeOrder(String storeMenu, String pizzaIngredients, double pizzaPrice, String sides, String drinks) {
         System.out.println("Order taken for " + storeMenu);
@@ -63,7 +63,7 @@ public class Info {
         System.out.println("Pizza Price: " + pizzaPrice);
         System.out.println("Sides: " + sides);
         System.out.println("Drinks: " + drinks);
-        printReceipt(storeName, storeAddress, storePhone, storeEmail, orderID, oederTotal);
+        printReceipt(storeName, storeAddress, storePhone, storeEmail, orderID, orderTotal);
     }
     
     public void makePizza(String pizzaIngredients) {
